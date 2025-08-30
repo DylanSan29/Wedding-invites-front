@@ -5,6 +5,7 @@ import ItinerarySection from "../components/ItinerarySection"
 import DressCodeSection from "../components/DressCodeSection"
 import RecommendationsSection from "../components/RecommendationsSection"
 import GiftRegistrySection from "../components/GiftRegistrySection"
+import RSVPSection from "../components/RSVPSection"
 
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       <DressCodeSection />
       <RecommendationsSection />
       <GiftRegistrySection />
+      <RSVPSection />
     </main>
   )
 }
