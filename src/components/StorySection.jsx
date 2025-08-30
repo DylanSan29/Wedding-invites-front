@@ -1,15 +1,15 @@
 export default function StorySection() {
   const storyImages = [
     {
-      src: "/desert-embrace.png",
+      src: "/assets/images/desert-embrace.png",
       alt: "Mauret and Carlos embracing",
     },
     {
-      src: "/desert-kiss.png",
+      src: "/assets/images/desert-kiss.png",
       alt: "Mauret and Carlos kissing at sunset",
     },
     {
-      src: "/desert-dance.png",
+      src: "/assets/images/desert-dance.png",
       alt: "Mauret and Carlos dancing in canyon",
     },
   ]
