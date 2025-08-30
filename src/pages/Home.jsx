@@ -2,6 +2,7 @@ import Header2 from "../components/Header2"
 import StorySection from "../components/StorySection"
 import CountdownTimer from "../components/CountdownTimer"
 import ItinerarySection from "../components/ItinerarySection"
+import DressCodeSection from "../components/DressCodeSection"
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <StorySection/>
       <CountdownTimer />
       <ItinerarySection />
+      <DressCodeSection />
     </main>
   )
 }
