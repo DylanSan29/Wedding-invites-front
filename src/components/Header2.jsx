@@ -16,16 +16,17 @@ export default function Header2() {
       <div
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-           backgroundImage: `url('/assets/images/editt.png')`,
+            backgroundImage: `url('/assets/images/editt.png')`,
         }}
       >
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/20"></div>
       </div>
 
-      {/* Content Container */}
+      {/* Content Container (Es el contenedor Flexbox que centra verticalmente) */}
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-4">
-        {/* Main Title */}
+        
+        {/* Main Title (Se mantiene centrado en el medio) */}
         <div className="mb-16 text-center">
           <h1 className="font-serif text-6xl font-light tracking-[0.2em] text-white md:text-7xl lg:text-8xl">MAURET</h1>
           <div className="my-4 flex items-center justify-center">
@@ -38,9 +39,18 @@ export default function Header2() {
           <h1 className="font-serif text-6xl font-light tracking-[0.2em] text-white md:text-7xl lg:text-8xl">CARLOS</h1>
         </div>
 
-        {/* Navigation Menu */}
-        <nav className="w-full max-w-4xl" style={{backgroundColor: 'transparent'}}>
-          <ul className="flex flex-wrap items-center justify-center gap-6 text-sm font-light tracking-wider text-white/90 md:gap-8 lg:gap-12">
+        {/* Navigation Menu 
+            Añadido: order-last (para que vaya al final, debajo del título)
+        */}
+        <nav 
+            className="w-full max-w-4xl order-last" // <-- CLASE AÑADIDA
+            style={{backgroundColor: 'transparent'}}
+        >
+          {/* Modificado: 
+            - grid grid-cols-2 gap-4 text-center (en móvil para apilar en dos columnas)
+            - md:flex md:flex-wrap md:justify-center (en escritorio para volver a la línea horizontal)
+          */}
+          <ul className="grid grid-cols-2 gap-4 text-center text-sm font-light tracking-wider text-white/90 md:flex md:flex-wrap md:items-center md:justify-center md:gap-8 lg:gap-12">
             {navigationItems.map((item, index) => (
               <li key={index}>
                 <a
