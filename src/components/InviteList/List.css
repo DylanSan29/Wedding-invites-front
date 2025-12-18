@@ -1,0 +1,93 @@
+.invite-container {
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.08);
+  font-family: "Poppins", sans-serif;
+}
+
+.title {
+  font-size: 32px;
+  text-align: center;
+  color: #2c2c2c;
+}
+
+.subtitle {
+  text-align: center;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+.add-guest {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.add-guest input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.add-guest button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 10px;
+  background: #c9a24d;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.guest-list {
+  list-style: none;
+  padding: 0;
+}
+
+.guest-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  background: #fafafa;
+}
+
+.guest-name {
+  font-weight: 500;
+}
+
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+.status.confirmed {
+  background: #e6f4ea;
+  color: #2e7d32;
+}
+
+.status.declined {
+  background: #fdecea;
+  color: #c62828;
+}
+
+.status.pending {
+  background: #fff8e1;
+  color: #f9a825;
+}
+
+.remove-btn {
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  color: #999;
+}

@@ -1,0 +1,89 @@
+.invitation-wrapper {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #faf6f2, #f3ede7);
+  font-family: "Playfair Display", serif;
+}
+
+.invitation-card {
+  background: #ffffff;
+  padding: 40px;
+  max-width: 420px;
+  width: 100%;
+  border-radius: 18px;
+  text-align: center;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.12);
+}
+
+.couple-names {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.invitation-text {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.event-details p {
+  margin: 6px 0;
+  font-size: 15px;
+}
+
+.question {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.rsvp-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.btn {
+  padding: 12px;
+  border-radius: 30px;
+  font-size: 15px;
+  cursor: pointer;
+  border: none;
+}
+
+.btn.confirm {
+  background: #c9a24d;
+  color: white;
+}
+
+.btn.decline {
+  background: #f5f5f5;
+  color: #444;
+}
+
+.confirmation-section {
+  margin-top: 20px;
+}
+
+.thank-you {
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.qr-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.qr-note {
+  font-size: 13px;
+  color: #777;
+}
+
+.declined-text {
+  margin-top: 20px;
+  font-size: 15px;
+  color: #777;
+}
