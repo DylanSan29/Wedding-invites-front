@@ -1,4 +1,6 @@
-const API_URL = process.env.REACT_APP_API_URL || "http://localhost:5000/api";
-const API_KEY = process.env.REACT_APP_API_KEY || "123";
-
-export { API_URL, API_KEY };
+export const API_URLS = {
+  AUTH: 'http://localhost:5001/api',
+  GUEST: 'http://localhost:5002/api',
+  INVITATION_CONTENT: 'http://localhost:5003/api',
+  MANAGEMENT: 'http://localhost:5004/api',
+};

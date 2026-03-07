@@ -1,14 +1,11 @@
-import api from '../api/axiosInstance';
-import { guestAdapter } from '../adapters/guestAdapter';
+import guestApi from '../api/guestApi';
 
-export const getAllGuests = async () => {
-  try {
-   
-    const { data } = await api.get('/guests'); 
-    
-    return data.map(guest => guestAdapter(guest));
-  } catch (error) {
-    console.error("Error fetching guests:", error);
-    throw error;
-  }
+export const getPersonalInvitation = async (guestId) => {
+    const { data } = await guestApi.get(`/guests/${guestId}/invitation`);
+    return data;
+};
+
+export const registerDecision = async (guestId, rsvpData) => {
+    // Este reemplaza la lógica que tenías en rsvpService
+    return await guestApi.post(`/guests/${guestId}/invitation`, rsvpData);
 };
