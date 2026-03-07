@@ -1,12 +1,29 @@
-import managementApi from '../api/managementApi';
-import { guestListAdapter } from '../adapters/guestAdapter';
+import axios from 'axios';
+import { API_URLS } from '../Config';
 
-export const getInviteList = async (eventId) => {
-  const { data } = await managementApi.get(`/event/${eventId}/guests`);
-  return guestListAdapter(data);
-};
+const managementApi = axios.create({
+  baseURL: API_URLS.MANAGEMENT,
+});
 
-export const addGuest = async (eventId, guestData) => {
-  const { data } = await managementApi.post(`/event/${eventId}/guests`, guestData);
-  return data;
-};
+managementApi.interceptors.request.use((config) => {
+  // Obtenemos el token directamente del almacenamiento o del estado
+  const token = localStorage.getItem('token');
+  if (token) {
+    config.headers.Authorization = `Bearer ${token}`;
+  }
+  return config;
+});
+
+// Si el microservicio de Auth invalida el token (401), limpiamos todo
+managementApi.interceptors.response.use(
+  (response) => response,
+  (error) => {
+    if (error.response?.status === 401) {
+      localStorage.removeItem('token');
+      window.location.href = '/login'; // O disparar el action de logOut de Redux
+    }
+    return Promise.reject(error);
+  }
+);
+
+export default managementApi;
